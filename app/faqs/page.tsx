@@ -78,7 +78,7 @@ const FAQs = () => {
 
             <div className='block sm:hidden p-[10px] pt-[30px] headerSec'>
             <h2 className='text-[25px] font-bold text-center mb-4' data-aos='fade-right'>Questions Looks Here</h2>  
-                <p className='text-center text-gray-600 mb-10 text-[14px]' data-aos='fade-left'>  
+                <p className='text-center text-gray-600 mb-10 text-[14px]' data-aos='fade-up'>  
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  
                 </p>
             </div>
