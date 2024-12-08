@@ -37,9 +37,9 @@ interface CategorySectionProps {
 
 const TopCategory: React.FC<CategorySectionProps> = ({ categories }) => {  
   return (  
-    <div className="flex flex-col justify-center items-center p-8" data-aos='zoom-in'>  
+    <div className="flex flex-col justify-center items-center p-8" >  
       <h2 className="flex justify-center items-center md:justify-start md:items-start text-xl font-bold mb-4 w-[100%] xl:w-[90%] text-start" data-aos='fade-right'>Top Categories</h2>  
-      <div className="flex flex-col justify-center items-center xl:grid xl:grid-cols-3 gap-[20px] xl:gap-4 w-[100%] lg:w-[90%]">  
+      <div data-aos='zoom-in' className="flex flex-col justify-center items-center xl:grid xl:grid-cols-3 gap-[20px] xl:gap-4 w-[100%] lg:w-[90%]">  
         {categories.map((category) => (  
           <CategoryCard  
             key={category.id}  
