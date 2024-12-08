@@ -102,9 +102,9 @@ body {
 .heroBtn{
   background-color: #029FAE;
 }
-.cartBg{
+/* .cartBg{
   background-color: #029FAE;
-}
+} */
 .slider{
   display: flex;
   align-items: center;

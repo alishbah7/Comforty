@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';  
 import Image from 'next/image';
 
@@ -5,9 +6,10 @@ interface Product  {
     title: string;  
     price: number;  
     salePrice: number | null;  
-    badge: "New" | "Sales" | null;  
+    badge: string; 
     image: string;  
-  };  
+    customClass: string;  
+}; 
 
 interface FeaturedProductsProps {  
   products: Product[];  
@@ -22,7 +24,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ products }) => {
           <div key={index} className="overflow-hidden">  
             <div className="relative">  
               {product.badge && (  
-                <span className={`absolute top-2 left-2 text-white text-xs py-[5px] px-[8px] w-[45px] rounded-md ${product.badge === 'New' ? 'bg-green-500' : 'bg-orange-500'}`}>  
+                <span className={`absolute top-2 left-2 text-white text-xs py-[5px] px-[8px] w-[45px] rounded-md ${product.badge === "New" ? 'bg-green-500' : 'bg-orange-500'}`}>  
                   {product.badge}  
                 </span>  
               )}  
@@ -39,7 +41,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ products }) => {
                     </div>
               </div>
               <div>
-                <button className="cartBg text-white px-[10px] py-[5px] rounded-md text-[20px]"><i className='bx bx-cart-alt'></i></button>  
+                <button className={`cartBg px-[10px] py-[5px] rounded-md text-[20px]  ${product.customClass}`}><i className='bx bx-cart-alt'></i></button>  
               </div>
             </div>  
           </div>  
