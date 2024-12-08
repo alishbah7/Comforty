@@ -1,46 +1,46 @@
-import BrandsSlider from "@/components/brands";
-import TopCategory from "@/components/category";
-import ChairGallery from "@/components/explore";
-import FeaturedProducts from "@/components/featured";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import Hero from "@/components/hero";
-import Products from "@/components/products";
+import BrandsSlider from '@/components/brands';
+import TopCategory from '@/components/category';
+import ChairGallery from '@/components/explore';
+import FeaturedProducts from '@/components/featured';
+import Footer from '@/components/footer';
+import Header from '@/components/header';
+import Hero from '@/components/hero';
+import Products from '@/components/products';
 
 //--==== FEATURED PRODUCTS ====--//
 const products = [  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: null,  
     badge: 'New',  
-    image: "/images/fp1.png",
-    customClass: "bg-teal-500 text-white"
+    image: '/images/fp1.png',
+    customClass: 'bg-teal-500 text-white'
   },  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: 30,  
     badge: 'Sales',  
-    image: "/images/fp2.png", 
-    customClass: "bg-gray-200 text-black"
+    image: '/images/fp2.png', 
+    customClass: 'bg-gray-200 text-black'
 
   },  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: null,  
-    badge: "",  
-    image: "/images/fp3.png",  
-    customClass: "bg-gray-200 text-black"
+    badge: '',  
+    image: '/images/fp3.png',  
+    customClass: 'bg-gray-200 text-black'
   },  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: null,  
-    badge: "",  
-    image: "/images/fp4.png",  
-    customClass: "bg-gray-200 text-black"
+    badge: '',  
+    image: '/images/fp4.png',  
+    customClass: 'bg-gray-200 text-black'
   },  
 ]; 
 
@@ -69,70 +69,70 @@ const categories = [
 //--==== PRODUCTS ====--//
 const productSlider = [
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: null,  
     badge: 'New',  
-    image: "/images/fp1.png",
-    customClass: "bg-teal-500 text-white"
+    image: '/images/fp1.png',
+    customClass: 'bg-teal-500 text-white'
   },  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: 30,  
     badge: 'Sales',  
-    image: "/images/fp2.png", 
-    customClass: "bg-gray-200 text-black"
+    image: '/images/fp2.png', 
+    customClass: 'bg-gray-200 text-black'
 
   },  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: null,  
-    badge: "",  
-    image: "/images/fp3.png",  
-    customClass: "bg-gray-200 text-black"
+    badge: '',  
+    image: '/images/fp3.png',  
+    customClass: 'bg-gray-200 text-black'
   },  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: null,  
-    badge: "",  
-    image: "/images/fp4.png",  
-    customClass: "bg-gray-200 text-black"
+    badge: '',  
+    image: '/images/fp4.png',  
+    customClass: 'bg-gray-200 text-black'
   },  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: null,  
     badge: 'New',  
-    image: "/images/catimg1.png",
-    customClass: "bg-teal-500 text-white"
+    image: '/images/catimg1.png',
+    customClass: 'bg-teal-500 text-white'
   },  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: 30,  
     badge: 'Sales',  
-    image: "/images/exploreimg.png", 
-    customClass: "bg-gray-200 text-black"
+    image: '/images/exploreimg.png', 
+    customClass: 'bg-gray-200 text-black'
 
   },  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: null,  
-    badge: "",  
-    image: "/images/productsimg1.png",  
-    customClass: "bg-gray-200 text-black"
+    badge: '',  
+    image: '/images/productsimg1.png',  
+    customClass: 'bg-gray-200 text-black'
   },  
   {  
-    title: "Library Stool Chair",  
+    title: 'Library Stool Chair',  
     price: 20,  
     salePrice: null,  
-    badge: "",  
-    image: "/images/fp1.png",  
-    customClass: "bg-gray-200 text-black"
+    badge: '',  
+    image: '/images/fp1.png',  
+    customClass: 'bg-gray-200 text-black'
   },  
 ]; 
 

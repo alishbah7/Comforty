@@ -5,8 +5,8 @@ import 'aos/dist/aos.css';
 import Image from 'next/image';
 import logo from '../public/images/logo.png';
 import Link from 'next/link';
-import { Menu } from "lucide-react"; 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Menu } from 'lucide-react'; 
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 const Header = () => {  
     useEffect(() => {
@@ -14,18 +14,18 @@ const Header = () => {
 }, []);
     return (  
         <div>
-            <div className="text-center sm:flex sm:justify-between sm:items-center text-white py-2 w-full sm:px-[20px] lg:px-[250px] headerTop">
+            <div className='text-center sm:flex sm:justify-between sm:items-center text-white py-2 w-full sm:px-[20px] lg:px-[250px] headerTop'>
                 <div className='flex gap-[5px] items-center justify-center text-[14px]' data-aos='fade-down'>
                     <i className='bx bx-check text-[20px] text-gray-400 font-extralight'></i>
-                    <span className="text-gray-300 font-extralight hdText">Free shipping on all orders over $50 </span>
+                    <span className='text-gray-300 font-extralight hdText'>Free shipping on all orders over $50 </span>
                 </div>
                 <div className='hidden sm:flex gap-[16px] sm:text-[12px] md:text-[14px]' data-aos='fade-down'>
-                    <select name="options" className='border-none text-[6px] sm:text-[12px] font-extralight sm:tracking-wider cursor-pointer text-gray-300  headerTop'>
-                        <option value="option1">English</option>
-                        <option value="option2">Spanish</option>
-                        <option value="option3">Arabic</option>
+                    <select name='options' className='border-none text-[6px] sm:text-[12px] font-extralight sm:tracking-wider cursor-pointer text-gray-300  headerTop'>
+                        <option value='option1'>English</option>
+                        <option value='option2'>Spanish</option>
+                        <option value='option3'>Arabic</option>
                     </select>
-                    <Link href={'/faqs'}><h1 className='hidden sm:block sm:text-[12px] sm:tracking-wider cursor-pointer text-gray-300 font-extralight headerTop'>Faqs</h1></Link>
+                    <Link href='/faqs'><h1 className='hidden sm:block sm:text-[12px] sm:tracking-wider cursor-pointer text-gray-300 font-extralight headerTop'>Faqs</h1></Link>
                     <h1 className='hidden sm:block sm:text-[12px] sm:tracking-wider cursor-pointer text-gray-300 font-extralight headerTop'><i className='bx bx-help-circle'></i> Need Help</h1>
                 </div>
             </div>
@@ -35,11 +35,13 @@ const Header = () => {
                     <h1 className='tracking-wider text-[20px]'>Comforty</h1>
                 </div>
                 <div className='flex gap-[10px]' data-aos='fade-left'>
+                    <Link href={'/cart'}>
                     <div className='flex gap-[8px] justify-center items-center rounded-md bg-white h-[35px] w-[100px] py-[5px]'>
                         <i className='bx bx-cart text-[20px]'></i>
                         <h1 className='text-[14px] tracking-wide'>Cart</h1>
                         <p className='bg-green-900 hdP'>2</p>
                     </div>
+                    </Link>
                     <div className='block md:hidden'>
                         <Sheet>
                             <SheetTrigger>
