@@ -167,7 +167,7 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
         <div className='container mx-auto my-10 px-4'>  
             <div className='flex justify-center sm:justify-between items-center mb-6'>  
                 <h2 className='text-3xl font-bold text-center sm:text-start tracking-widest uppercase' data-aos='fade-right'>Featured Products</h2>  
-                <Link href='/products' className='hidden sm:block font-semibold border-b-2 border-black' data-aos='fade-left'>View all</Link>  
+                <Link href='/products' className='hidden sm:block font-semibold border-b-2 border-black' data-aos='fade-right'>View all</Link>  
             </div>  
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6'>  
                 {featuredProducts.map((product) => (  
