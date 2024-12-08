@@ -1,5 +1,4 @@
-import React from 'react';  
-import Image from 'next/image';
+  import Image from 'next/image';
 import logo from '../public/images/logo.png';
 import Link from 'next/link';
 import { Menu } from "lucide-react"; 

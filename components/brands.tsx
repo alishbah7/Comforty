@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import zapier from '../public/images/zapier.png';
 import pipedrive from '../public/images/pipedrive.png';
@@ -31,7 +30,6 @@ export default function BrandsSlider(){
                     <div className="item" style={{'--position': 12} as React.CSSProperties}><Image src={burntoast} alt=""  className='w-[100px] h-auto'/></div>
                     <div className="item" style={{'--position': 13} as React.CSSProperties}><Image src={pandadoc} alt=""  className='w-[100px] h-auto'/></div>
                     <div className="item" style={{'--position': 14} as React.CSSProperties}><Image src={moz} alt=""  className='w-[100px] h-auto'/></div>
-
                 </div>
             </div>
         </div>
