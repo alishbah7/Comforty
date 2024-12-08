@@ -1,8 +1,11 @@
 import BrandsSlider from "@/components/brands";
+import TopCategory from "@/components/category";
+import ChairGallery from "@/components/explore";
 import FeaturedProducts from "@/components/featured";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-// import Image from "next/image";
+
+//--==== FEATURED PRODUCTS ====--//
 const products = [  
   {  
     title: "Library Stool Chair",  
@@ -38,6 +41,28 @@ const products = [
     customClass: "bg-gray-200 text-black"
   },  
 ]; 
+
+//--==== TOP CATEGORIES ====--//
+const categories = [  
+  {  
+    id: 1,  
+    image: '/images/catimg1.png', 
+    title: 'Wing Chair',  
+    productCount: '3,584',  
+  },  
+  {  
+    id: 2,  
+    image: '/images/catimg2.png', 
+    title: 'Wooden Chair',  
+    productCount: '157',  
+  },  
+  {  
+    id: 3,  
+    image: '/images/catimg3.png', 
+    title: 'Desk Chair',  
+    productCount: '154',  
+  },  
+]; 
 export default function Home() {
   return (
     <div>
@@ -45,6 +70,8 @@ export default function Home() {
       <Hero/>
       <BrandsSlider/>
       <FeaturedProducts products={products}/>
+      <TopCategory categories={categories}/>
+      <ChairGallery/>
     </div>
   );
 }
