@@ -16,7 +16,7 @@ const ChairGallery: React.FC = () => {
     AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
 }, []);
   return (  
-    <div className='flex justify-center items-center mt-[40px]'>
+    <div className='flex justify-center items-center mt-[40px] '>
     <div className='flex justify-center items-center flex-col xl:flex-row md:gap-6 p-6 w-[90%]'>  
       <div className='flex-shrink-0'>  
         <div className='h-[510px] flex flex-col xl:flex-row gap-[30px] items-center justify-center'> 

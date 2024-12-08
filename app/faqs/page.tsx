@@ -11,7 +11,7 @@ const FAQs = () => {
         AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
     }, []);
     return (  
-        <div>
+        <div className='overflow-hidden'>
             <Header/>
             <div className='hidden sm:block container mx-auto px-5 my-10'>  
                 <h2 className='text-3xl font-bold text-center mb-4' data-aos='fade-right'>Questions Looks Here</h2>  

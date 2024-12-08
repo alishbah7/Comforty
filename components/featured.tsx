@@ -22,7 +22,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ products }) => {
     AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
 }, []);
   return (  
-    <div className='container mx-auto my-10 px-5'>  
+    <div className='container mx-auto my-10 px-5 '>  
       <h2 className='flex justify-center items-center text-center sm:text-start sm:block text-2xl font-bold text-gray-800' data-aos='fade-right'>Featured Products</h2>  
       <div className='flex flex-col justify-center items-center sm:grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-5'>  
         {products.map((product, index) => (  

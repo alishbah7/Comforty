@@ -128,7 +128,7 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
         );
     }
     return (
-        <div>
+        <div className='overflow-hidden'>
         <Header />
         <div className='flex flex-col xl:flex-row justify-between items-center rounded-md overflow-hidden xl:px-[250px] h-auto xl:h-[80vh] py-[30px] xl:py-[0]'>
             <div className='w-[250px] xl:w-[400px]'>

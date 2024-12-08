@@ -11,7 +11,7 @@ const CartSummary = () => {
     AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
 }, []);
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Header/>
       <div className='flex justify-center items-center px-[20px] sm:px-[0] py-[30px] lg:py[0] h-auto lg:h-[80vh] w-[100%]'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
