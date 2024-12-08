@@ -13,7 +13,7 @@ const Header = () => {
         AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
 }, []);
     return (  
-        <div>
+        <div className='overflow-hidden'>
             <div className='text-center sm:flex sm:justify-between sm:items-center text-white py-2 w-full sm:px-[20px] lg:px-[250px] headerTop'>
                 <div className='flex gap-[5px] items-center justify-center text-[14px]' data-aos='fade-down'>
                     <i className='bx bx-check text-[20px] text-gray-400 font-extralight'></i>
