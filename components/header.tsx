@@ -25,7 +25,7 @@ const Header = () => {
                         <option value="option2">Spanish</option>
                         <option value="option3">Arabic</option>
                     </select>
-                    <h1 className='hidden sm:block sm:text-[12px] sm:tracking-wider cursor-pointer text-gray-300 font-extralight headerTop'>Faqs</h1>
+                    <Link href={'/faqs'}><h1 className='hidden sm:block sm:text-[12px] sm:tracking-wider cursor-pointer text-gray-300 font-extralight headerTop'>Faqs</h1></Link>
                     <h1 className='hidden sm:block sm:text-[12px] sm:tracking-wider cursor-pointer text-gray-300 font-extralight headerTop'><i className='bx bx-help-circle'></i> Need Help</h1>
                 </div>
             </div>
@@ -48,11 +48,12 @@ const Header = () => {
                             <SheetContent>
                             <div className='block md:hidden'>
                                 <nav className='flex flex-col gap-[15px] text-gray-600'>
-                                    <Link href={''} className='navHome'>Home</Link>
-                                    <Link href={''}>Shop</Link>
-                                    <Link href={''}>Products</Link>
+                                    <Link href={'/'} className='navHome'>Home</Link>
+                                    <Link href={'/products'}>Shop</Link>
+                                    <Link href={'/products'}>Products</Link>
                                     <Link href={''}>Pages</Link>
-                                    <Link href={''}>About</Link>
+                                    <Link href={'/about'}>About</Link>
+                                    <Link href={'/faqs'}>Faqs</Link>
                                 </nav>
                             </div>
                             </SheetContent>
@@ -62,11 +63,11 @@ const Header = () => {
             </div>
             <div className='hidden md:flex justify-between py-[20px] px-[10px] lg:px-[250px] h-[60px] border-b border-gray-300'>
                 <nav className='hidden md:flex gap-[20px] text-gray-600' data-aos='fade-right'>
-                    <Link href={''} className='navHome'>Home</Link>
-                    <Link href={''}>Shop</Link>
-                    <Link href={''}>Products</Link>
+                    <Link href={'/'} className='navHome'>Home</Link>
+                    <Link href={'/products'}>Shop</Link>
+                    <Link href={'/products'}>Products</Link>
                     <Link href={''}>Pages</Link>
-                    <Link href={''}>About</Link>
+                    <Link href={'/about'}>About</Link>
                 </nav>
                 <div className='flex gap-[10px]' data-aos='fade-left'>
                     <h1 className='text-[16px] text-gray-600'>Contact:</h1>

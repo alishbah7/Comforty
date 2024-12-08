@@ -28,9 +28,9 @@ const Products: React.FC<ProductsProps> = ({ products }) => {
         <div>
             <div className="hidden sm:block container mx-auto my-10 px-5">  
             <h2 className="flex justify-center items-center text-center text-2xl font-bold text-gray-800" data-aos='fade-right'>Our Products</h2>  
-            <div className="flex flex-col justify-center items-center sm:grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-[38px]" data-aos='zoom-in'>  
+            <div className="flex flex-col justify-center items-center sm:grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-[38px]">  
                 {products.map((product, index) => (  
-                <div key={index} className="overflow-hidden">  
+                <div key={index} className="overflow-hidden" data-aos='zoom-in'>  
                     <div className="relative">  
                     {product.badge && (  
                         <span className={`absolute top-2 left-2 text-white text-xs py-[5px] px-[8px] w-[45px] rounded-md ${product.badge === "New" ? 'bg-green-500' : 'bg-orange-500'}`}>  

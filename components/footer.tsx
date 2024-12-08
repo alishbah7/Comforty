@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
             </footer> 
 
             <div>
-                <div className='flex flex-col md:flex-row justify-center items-center md:justify-between md:px-[100px] py-[20px] w-full border-t border-gray-500'>
+                <div className='flex flex-col md:flex-row justify-center items-center md:justify-between md:px-[100px] py-[20px] w-full border-t border-gray-500 bg-white'>
                     <h1 className='text-[12px] sm:text-[15px] text-gray-400 mt-[15px]'>@ 2024 - Designed & Developed by Alishbah</h1>
                     <Image src={ftimg} alt='' className='h-auto w-[120px] sm:w-[160px]' width={200} height={200}/>
                 </div>
