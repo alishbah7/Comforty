@@ -1,4 +1,7 @@
-'use client' 
+'use client';
+import { useEffect } from 'react';
+import AOS from 'aos'; 
+import 'aos/dist/aos.css';
 import Image from 'next/image';
 
 interface Product  {  
@@ -15,12 +18,15 @@ interface FeaturedProductsProps {
 }  
 
 const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ products }) => {  
+  useEffect(() => {
+    AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
+}, []);
   return (  
     <div className="container mx-auto my-10 px-5">  
-      <h2 className="flex justify-center items-center text-center sm:text-start sm:block text-2xl font-bold text-gray-800">Featured Products</h2>  
+      <h2 className="flex justify-center items-center text-center sm:text-start sm:block text-2xl font-bold text-gray-800" data-aos='fade-right'>Featured Products</h2>  
       <div className="flex flex-col justify-center items-center sm:grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-5">  
         {products.map((product, index) => (  
-          <div key={index} className="overflow-hidden">  
+          <div key={index} className="overflow-hidden" data-aos='zoom-in'>  
             <div className="relative">  
               {product.badge && (  
                 <span className={`absolute top-2 left-2 text-white text-xs py-[5px] px-[8px] w-[45px] rounded-md ${product.badge === "New" ? 'bg-green-500' : 'bg-orange-500'}`}>  

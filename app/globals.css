@@ -76,7 +76,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
+body{
+  overflow-x: hidden;
+}
 .headerTop{
   background-color: #272343;
 }
@@ -158,3 +160,58 @@ body {
       left: 100%;
   }
 }
+.ftIcons {  
+  border: none;  
+  transition: 0.5s ease, transform 0.5s ease;  
+  display: inline-flex; 
+  align-items: center;  
+  justify-content: center;  
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%;  
+  background-color: white;  
+  color: gray; 
+  padding: 10px;
+}  
+
+.ftIcons:hover {  
+  transform: scale(1.1); 
+  border: 1px solid #007580; 
+  color: #007580;  
+} 
+
+.hoverLinks {
+  position: relative;
+}
+.hoverLinks:hover{
+  color: #007580;
+}
+.hoverLinks::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007580;
+  transition: width 0.3s ease;
+}
+.hoverLinks:hover::after {
+  width: 100%;
+}
+.hoverLinkSofa:hover::after{
+  width: 40%;
+}
+.hoverLinkArm:hover::after{
+  width: 60%;
+}
+.hoverLinkChair:hover::after{
+  width: 80%;
+}
+.hoverLinkHelp:hover::after{
+  width: 30%;
+}
+.hoverLinkhelppolicy:hover::after{
+  width: 75%;
+}
+
