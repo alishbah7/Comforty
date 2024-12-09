@@ -1,4 +1,6 @@
 'use client';
+import { useEffect } from 'react';
+import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
@@ -75,6 +77,9 @@ const products: Product[] = [
 ];
 
 export default function ProductDetails({ params }: { params: { id: string } }) {
+    useEffect(() => {
+        AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
+    }, []);
     const featuredProducts = [ 
         {  
             id: 1,  
@@ -107,7 +112,6 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
             image: '/images/catimg1.png',  
         }, 
     ];  
-
     const { id } = params;
     const product = products.find((item) => item.id === id);
 
@@ -116,7 +120,7 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
         <div>
             <Header />
             <div className='text-center py-10'>
-                <h1 className='text-2xl font-bold'>Product Not Found</h1>
+            <h1 className='text-2xl font-bold'>Product Not Found</h1>
             </div>
             <Footer />
         </div>
@@ -137,7 +141,7 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
             />
             </div>
             <div>
-            <div className='p-6'>
+            <div className='p-[10px] sm:p-6 max-[400px]:w-[280px]'>
                 <div className='border-b border-gray-500 pb-[30px]'>
                 <h2 className='text-[30px] font-bold text-gray-800 xl:mt-[-50px]' data-aos='fade-left'>
                     Library Stool <br /> Chair
@@ -146,7 +150,7 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
                     $20.00 USD
                 </p>
                 </div>
-                <p className='mt-[30px] text-gray-600 w-[380px]' data-aos='fade-up'>
+                <p className='mt-[30px] text-gray-600 w-[380px] max-[400px]:w-[270px]' data-aos='fade-up'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 tincidunt erat enim. Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit.

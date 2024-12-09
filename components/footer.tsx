@@ -1,11 +1,16 @@
 'use client';
+import { useEffect } from 'react';
+import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../public/images/logo.png'
 import ftimg from '../public/images/footerimg.png'
 
-const Footer: React.FC = () => {  
+const Footer: React.FC = () => {
+    useEffect(() => {
+        AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
+    }, []);  
     return (  
         <div>
             <footer className='bg-white py-8 border-t border-gray-400'>  
