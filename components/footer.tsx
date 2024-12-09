@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
                     placeholder='Your email'  
                     className='border border-gray-300 p-2 rounded-md focus:outline-none w-[160px] sm:w-[200px] xl:w-[240px] mt-[10px] h-[35px] sm:h-[40px]'  
                     />  
-                    <button className='bg-teal-500 text-white text-[13px] sm:text-[20px] w-[65px] sm:w-[120px] h-[35px] sm:h-[40px] p-1 ml-[8px] sm:ml-[10px] mt-[10px] rounded-md'>  
+                    <button className='bg-[#029FAE] text-white text-[13px] sm:text-[20px] w-[65px] sm:w-[120px] h-[35px] sm:h-[40px] p-1 ml-[8px] sm:ml-[10px] mt-[10px] rounded-md'>  
                     Subscribe  
                     </button>  
                 </div>  

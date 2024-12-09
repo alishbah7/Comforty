@@ -147,7 +147,7 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
                 <h2 className='text-4xl font-bold text-gray-800 xl:mt-[-60px]' data-aos='fade-left'>
                     Library Stool <br /> Chair
                 </h2>
-                <p data-aos='fade-left' className='flex items-center justify-center text-lg rounded-full font-semibold text-[11.9px] text-white w-[120px] h-[30px] bg-teal-500 mt-[20px]'>
+                <p data-aos='fade-left' className='flex items-center justify-center text-lg rounded-full font-semibold text-[11.9px] text-white w-[120px] h-[30px] bg-[#029FAE] mt-[20px]'>
                     $20.00 USD
                 </p>
                 </div>
@@ -156,7 +156,7 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
                 tincidunt erat enim. Lorem ipsum dolor <br /> sit amet, consectetur
                 adipiscing elit.
                 </p>
-                <button data-aos='fade-up' className='flex gap-[1px] mt-4 bg-teal-500 text-white py-2 px-4 rounded-md'>
+                <button data-aos='fade-up' className='flex gap-[1px] mt-4 bg-[#029FAE] text-white py-2 px-4 rounded-md'>
                 <i className='bx bx-cart pr-[10px] text-[20px]'></i>
                 Add To Cart
                 </button>

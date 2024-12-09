@@ -18,7 +18,7 @@ const Hero = () => {
         <h2 className='text-[35px] sm:text-[40px] font-bold mb-4 text-gray-800 leading-[1.2]' data-aos='fade-right'>  
           Best Furniture <br /> Collection For Your  <br /> Interior.  
         </h2>  
-        <button className='heroBtn flex gap-[10px] text-white py-2 px-4 rounded hover:bg-teal-500 transition duration-200' data-aos='fade-up'>  
+        <button className='heroBtn flex gap-[10px] text-white py-2 px-4 rounded' data-aos='fade-up'>  
           <Link href={''}>Shop Now</Link> 
           <i className='bx bx-right-arrow-alt pt-[4px]' ></i>
         </button>  

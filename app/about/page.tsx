@@ -15,14 +15,14 @@ const About = () => {
         <div>
             <Header/>
             <div className='w-full flex flex-col md:flex-row  gap-[25px] items-center justify-center text-white py-[40px]'>  
-            <div data-aos='zoom-in' className='flex flex-col justify-center items-center gap-[30px] sm:justify-start sm:items-start sm:gap-[0] bg-teal-700 w-[250px] sm:w-[450px] h-[300px] sm:h-[400px]'>  
+            <div data-aos='zoom-in' className='flex flex-col justify-center items-center gap-[30px] sm:justify-start sm:items-start sm:gap-[0] bg-[#029FAE] w-[250px] sm:w-[450px] h-[300px] sm:h-[400px]'>  
                 <h2 className='text-[20px] sm:text-[25px] font-bold sm:pl-[40px] sm:mt-[60px]'>About Us - Comforty</h2>  
                 <p className='sm:pl-[40px] text-[12px] sm:mt-[10px] w-[80%] text-center sm:text-start'>  
                     At Comforty, we believe that the right chair can transform your space and elevate your comfort.   
                     Specializing in ergonomic design, premium materials, and modern aesthetics, we craft chairs that   
                     seamlessly blend style with functionality.  
                 </p>  
-                <button className='bg-teal-600 bg-opacity-70 text-white py-2 px-4 rounded sm:mt-[100px] sm:ml-[40px]'>  
+                <button className='bg-teal-100 bg-opacity-20 text-white py-2 px-4 rounded sm:mt-[100px] sm:ml-[40px]'>  
                     View Collection  
                 </button>  
             </div>  
@@ -42,30 +42,30 @@ const About = () => {
         <div className='py-12 text-start flex justify-center items-center'>    
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4 w-[80%]'>  
                 <div className='shadow-md p-6 flex flex-col items-start h-[200px] bg-gray-100' data-aos='zoom-in'>  
-                    <i className='bx bxs-truck text-[25px] mb-[10px] text-teal-600'></i> 
-                    <h3 className='text-xl text-teal-600 mb-2'>Next day as standard</h3>  
-                    <p className='text-teal-600 text-[12px]'>  
+                    <i className='bx bxs-truck text-[25px] mb-[10px] text-[#029FAE]'></i> 
+                    <h3 className='text-xl text-[#029FAE] mb-2'>Next day as standard</h3>  
+                    <p className='text-[#029FAE] text-[12px]'>  
                         Order before 3pm and get your order the next day as standard.  
                     </p>  
                 </div>  
                 <div className='shadow-md p-6 flex flex-col items-start h-[200px] bg-gray-100' data-aos='zoom-in'>  
-                    <i className='bx bx-check-circle text-[25px] mb-[10px] text-teal-600'></i>  
-                    <h3 className='text-xl text-teal-600 mb-2'>Made by true artisans</h3>  
-                    <p className='text-teal-600 text-[12px]'>  
+                    <i className='bx bx-check-circle text-[25px] mb-[10px] text-[#029FAE]'></i>  
+                    <h3 className='text-xl text-[#029FAE] mb-2'>Made by true artisans</h3>  
+                    <p className='text-[#029FAE] text-[12px]'>  
                         Handmade crafted goods made with real passion and craftsmanship.  
                     </p>  
                 </div>  
                 <div className=' shadow-md p-6 flex flex-col items-start h-[200px] bg-gray-100' data-aos='zoom-in'>  
-                    <i className='bx bx-wallet text-[25px] mb-[10px] text-teal-600' ></i>
-                    <h3 className='text-xl text-teal-600 mb-2'>Unbeatable prices</h3>  
-                    <p className='text-teal-600 text-[12px]'>  
+                    <i className='bx bx-wallet text-[25px] mb-[10px] text-[#029FAE]' ></i>
+                    <h3 className='text-xl text-[#029FAE] mb-2'>Unbeatable prices</h3>  
+                    <p className='text-[#029FAE] text-[12px]'>  
                         For our materials and quality you won’t find better prices anywhere.  
                     </p>  
                 </div>  
                 <div className=' shadow-md p-6 flex flex-col items-start h-[200px] bg-gray-100' data-aos='zoom-in'>  
-                    <i className='bx bx-recycle text-[25px] mb-[10px] text-teal-600' ></i>  
-                    <h3 className='text-xl text-teal-600 mb-2'>Recycled packaging</h3>  
-                    <p className='text-[12px] text-teal-600'>  
+                    <i className='bx bx-recycle text-[25px] mb-[10px] text-[#029FAE]' ></i>  
+                    <h3 className='text-xl text-[#029FAE] mb-2'>Recycled packaging</h3>  
+                    <p className='text-[12px] text-[#029FAE]'>  
                         We use 100% recycled to ensure our footprint is more manageable.  
                     </p>  
                 </div>  

@@ -90,7 +90,7 @@ const CartSummary = () => {
                 <p>$198.00</p>
               </div>
             </div>
-            <button className='mt-6 w-full bg-teal-500 text-white text-center py-3 rounded-full font-medium' data-aos='fade-right'>
+            <button className='mt-6 w-full bg-[#029FAE] text-white text-center py-3 rounded-full font-medium' data-aos='fade-right'>
               Member Checkout
             </button>
           </div>
