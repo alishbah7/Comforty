@@ -53,7 +53,7 @@ const Header = () => {
                                     <Link href={'/'} className='navHome'>Home</Link>
                                     <Link href={'/products'}>Shop</Link>
                                     <Link href={'/products'}>Products</Link>
-                                    <Link href={''}>Pages</Link>
+                                    <Link href={'/contact'}>Contact</Link>
                                     <Link href={'/about'}>About</Link>
                                     <Link href={'/faqs'}>Faqs</Link>
                                 </nav>
@@ -68,7 +68,7 @@ const Header = () => {
                     <Link href={'/'} className='navHome'>Home</Link>
                     <Link href={'/products'}>Shop</Link>
                     <Link href={'/products'}>Products</Link>
-                    <Link href={''}>Pages</Link>
+                    <Link href={'/contact'}>Contact</Link>
                     <Link href={'/about'}>About</Link>
                 </nav>
                 <div className='flex gap-[10px]' data-aos='fade-left'>
