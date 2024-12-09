@@ -24,8 +24,8 @@ const Products: React.FC<ProductsProps> = ({ products }) => {
     }, []); 
     return (  
         <div>
-            <div className='container mx-auto my-10 px-5'>  
-            <h2 className='flex justify-center items-center text-center text-2xl font-bold text-gray-800' data-aos='fade-right'>All Products</h2>  
+            <div className='container mx-auto my-10 px-[10px] xl:px-[180px]'>  
+            <h2 className='flex justify-center items-center lg:justify-start lg:items-start text-center lg:text-start text-2xl font-bold text-gray-800' data-aos='fade-right'>All Products</h2>  
             <div className='flex flex-col justify-center items-center sm:grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-[38px]'>  
                 {products.map((product, index) => (  
                 <div key={index} className='overflow-hidden' data-aos='zoom-in'>  
