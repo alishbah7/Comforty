@@ -1,6 +1,4 @@
-'use client';
-import { useEffect } from 'react';
-import AOS from 'aos'; 
+'use client'; 
 import 'aos/dist/aos.css';
 import Image from 'next/image';
 
@@ -18,9 +16,6 @@ interface FeaturedProductsProps {
 }  
 
 const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ products }) => {  
-  useEffect(() => {
-    AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
-}, []);
   return (  
     <div className='container mx-auto my-10 px-[10px] sm:px-[100px] '>  
       <h2 className='flex justify-center items-center text-center sm:text-start sm:block text-2xl font-bold text-gray-800' data-aos='fade-right'>Featured Products</h2>  

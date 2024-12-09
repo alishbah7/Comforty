@@ -1,15 +1,10 @@
-'use client';
-import { useEffect } from 'react';
-import AOS from 'aos'; 
+'use client'; 
 import 'aos/dist/aos.css';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
 const FAQs = () => {  
-    useEffect(() => {
-        AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
-    }, []);
     return (  
         <div>
             <Header/>

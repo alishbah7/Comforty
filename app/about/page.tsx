@@ -1,6 +1,4 @@
-'use client';
-import { useEffect } from 'react';
-import AOS from 'aos'; 
+'use client'; 
 import 'aos/dist/aos.css';
 import  Header  from '@/components/header';
 import fp1 from '../../public/images/fp1.png';
@@ -8,9 +6,6 @@ import Image from 'next/image';
 import Footer from '@/components/footer';
 
 const About = () => {  
-    useEffect(() => {
-        AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
-    }, []);
     return (  
         <div>
             <Header/>

@@ -76,9 +76,16 @@ body {
     @apply bg-background text-foreground;
   }
 }
-/* body{
-  overflow-x: hidden;
-} */
+::-webkit-scrollbar{
+  width: 12px;
+}
+::-webkit-scrollbar-track{
+  background: linear-gradient(rgb(255, 252, 236), rgb(190, 249, 247));
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(#007580, #029FAE);
+  border-radius: 10px;
+}
 .headerTop{
   background-color: #272343;
 }

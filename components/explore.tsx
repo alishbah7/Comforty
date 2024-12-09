@@ -1,6 +1,4 @@
 'use client';
-import { useEffect } from 'react';
-import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import Image from 'next/image'; 
 import fp3 from '../public/images/fp3.png';
@@ -12,9 +10,6 @@ import exploreimg2 from '../public/images/exploreimg2.png'
 
 
 const ChairGallery: React.FC = () => {  
-  useEffect(() => {
-    AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
-}, []);
   return (  
     <div className='flex justify-center items-center mt-[40px] '>
     <div className='flex justify-center items-center flex-col xl:flex-row md:gap-6 p-6 w-[90%]'>  

@@ -1,15 +1,10 @@
 'use client';
-import { useEffect } from 'react';
-import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import Image from 'next/image';  
 import heroImage from '../public/images/heroImg.png';  
 import Link from 'next/link' 
 
 const Hero = () => {  
-  useEffect(() => {
-    AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
-}, []);
   return (  
     <div className='bg-white w-full flex justify-center items-center' >
     <section className='flex flex-col lg:flex-row items-center justify-between px-[50px] bg-gray-100 w-[100%] lg:w-[65%] h-auto lg:h-[75vh]'>  

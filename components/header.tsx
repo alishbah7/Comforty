@@ -1,6 +1,4 @@
 'use client';
-import { useEffect } from 'react';
-import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import Image from 'next/image';
 import logo from '../public/images/logo.png';
@@ -9,9 +7,6 @@ import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 const Header = () => {  
-    useEffect(() => {
-        AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
-}, []);
     return (  
         <div className='overflow-hidden'>
             <div className='text-center sm:flex sm:justify-between sm:items-center text-white py-2 w-full sm:px-[20px] lg:px-[250px] headerTop'>

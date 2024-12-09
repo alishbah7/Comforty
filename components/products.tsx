@@ -1,6 +1,4 @@
 'use client';
-import { useEffect } from 'react';
-import AOS from 'aos'; 
 import 'aos/dist/aos.css'; 
 import { Swiper, SwiperSlide } from 'swiper/react';  
 import 'swiper/css';  
@@ -21,9 +19,6 @@ interface ProductsProps {
 }   
 
 const Products: React.FC<ProductsProps> = ({ products }) => {
-    useEffect(() => {
-        AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
-    }, []); 
     return (  
         <div>
             <div className='hidden sm:block container mx-auto my-10 sm:px-[100px]'>  
