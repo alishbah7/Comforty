@@ -108,7 +108,7 @@ const productSlider = [
         customClass: 'bg-gray-200 text-black'
       },  
     ]; 
-export default function Home() {
+export default function ProductsPage() {
   useEffect(() => {
     AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
 }, []);
