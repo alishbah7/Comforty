@@ -15,7 +15,7 @@ const Hero = () => {
     <section className='flex flex-col lg:flex-row items-center justify-between px-[50px] bg-gray-100 w-[100%] lg:w-[65%] h-auto lg:h-[75vh]'>  
       <div className='lg:max-w-md z-10 pt-[40px] lg:pt-[0]'>  
         <h1 className='text-[12px] mb-2 text-gray-700 uppercase tracking-wide' data-aos='fade-down'>Welcome to Chairy</h1>  
-        <h2 className='text-[35px] sm:text-[45px] font-bold mb-4 text-gray-800 leading-[1.2]' data-aos='fade-right'>  
+        <h2 className='text-[35px] sm:text-[40px] font-bold mb-4 text-gray-800 leading-[1.2]' data-aos='fade-right'>  
           Best Furniture <br /> Collection For Your  <br /> Interior.  
         </h2>  
         <button className='heroBtn flex gap-[10px] text-white py-2 px-4 rounded hover:bg-teal-500 transition duration-200' data-aos='fade-up'>  

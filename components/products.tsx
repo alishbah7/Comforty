@@ -26,7 +26,7 @@ const Products: React.FC<ProductsProps> = ({ products }) => {
     }, []); 
     return (  
         <div>
-            <div className='hidden sm:block container mx-auto my-10 px-5'>  
+            <div className='hidden sm:block container mx-auto my-10 sm:px-[100px]'>  
             <h2 className='flex justify-center items-center text-center text-2xl font-bold text-gray-800' data-aos='fade-right'>Our Products</h2>  
             <div className='flex flex-col justify-center items-center sm:grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-[38px]'>  
                 {products.map((product, index) => (  
