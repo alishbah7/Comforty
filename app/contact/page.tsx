@@ -91,6 +91,35 @@ const Contact = () => {
             </form>  
         </div>  
         </div> 
+        <div className='flex justify-center items-center'>
+            <div className='md:bg-gray-100 w-[80%] py-[60px]'>  
+                <div className='container mx-auto flex flex-col gap-[40px] md:gap-[0]  md:flex-row justify-around items-center'>  
+                    <div className='flex gap-[10px] items-center justify-center h-[100px] w-[250px] text-left bg-gray-100 p-[10px] md:px-[0] rounded-md' data-aos='zoom-in'>  
+                        <i className='bx bx-trophy text-[50px]' ></i>
+                        <div className='flex flex-col'>
+                            <span className='text-[15px] sm:text-lg font-semibold'>High Quality</span>  
+                            <p className='text-[12px] sm:text-[20px] text-gray-600'>crafted from top materials</p>  
+                        </div>
+                    </div>  
+
+                    <div className='flex gap-[10px] text-left items-center justify-center h-[100px] w-[250px] bg-gray-100 p-[10px] md:px-[0] rounded-md' data-aos='zoom-in'>  
+                        <i className='bx bx-badge-check text-[50px]'></i>
+                        <div className='flex flex-col'>
+                            <span className='text-[15px] sm:text-lg font-semibold'>Warranty Protection</span>  
+                            <p className='text-[12px] sm:text-[20px] text-gray-600'>Over 2 years</p>
+                        </div>
+                    </div>  
+
+                    <div className='flex gap-[10px] text-left items-center justify-center h-[100px] w-[250px] bg-gray-100 p-[10px] md:px-[0] rounded-md' data-aos='zoom-in'>  
+                        <i className='bx bx-support text-[50px] ml-[-28px]'></i>  
+                    <div className='flex flex-col'> 
+                        <span className='text-[15px] sm:text-lg font-semibold'>24 / 7 Support</span>  
+                        <p className='text-[12px] sm:text-[20px] text-gray-600'>Dedicated support</p>  
+                    </div>
+                    </div>  
+                </div>  
+            </div>
+        </div> 
         <Footer/> 
     </div>
   );  
