@@ -2,8 +2,6 @@
 import { useEffect } from 'react';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
-import Footer from '@/components/footer';
-import  Header  from '@/components/header';
 
 const Contact = () => {
     useEffect(() => {
@@ -11,7 +9,6 @@ const Contact = () => {
     }, []);   
   return (  
     <div>
-        <Header/>
         <div className='max-w-4xl mx-auto p-5'>  
         <h2 className='text-3xl font-bold text-center mb-4' data-aos='fade-right'>Get In Touch With Us</h2>  
         <p className='text-center mb-6 text-gray-400' data-aos='fade-right'>  
@@ -120,7 +117,6 @@ const Contact = () => {
                 </div>  
             </div>
         </div> 
-        <Footer/> 
     </div>
   );  
 };  

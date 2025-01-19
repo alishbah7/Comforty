@@ -2,8 +2,6 @@
 import { useEffect } from 'react';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
-import Footer from '@/components/footer';
-import Header from '@/components/header';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -118,17 +116,15 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
     if (!product) {
         return (
         <div>
-            <Header />
             <div className='text-center py-10'>
             <h1 className='text-2xl font-bold'>Product Not Found</h1>
             </div>
-            <Footer />
         </div>
         );
     }
     return (
         <div>
-        <Header />
+
         <div className='flex flex-col xl:flex-row justify-between items-center rounded-md overflow-hidden xl:px-[230px] h-auto xl:h-[80vh] py-[30px] xl:py-[0]'>
             <div className='w-[250px] xl:w-[500px]'>
             <Image
@@ -162,6 +158,7 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
             </div>
             </div>
         </div>
+
         <div className='container mx-auto my-10 px-[10px] xl:px-[100px]'>  
             <div className='flex justify-center sm:justify-between items-center mb-6'>  
                 <h2 className='text-2xl font-bold text-center sm:text-start tracking-widest uppercase' data-aos='fade-right'>Featured Products</h2>  
@@ -185,10 +182,11 @@ export default function ProductDetails({ params }: { params: { id: string } }) {
                 ))}  
             </div>  
         </div> 
+
         <div data-aos='fade-up' className='w-full flex justify-center items-center mb-[20px]'>
             <Link href='/products' className='flex sm:hidden justify-center items-center font-semibold rounded-md h-[30px] w-[100px] bg-black text-white'>View all</Link>  
         </div>
-        <Footer />         
+          
         </div>
     );
 }

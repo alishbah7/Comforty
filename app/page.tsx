@@ -139,14 +139,14 @@ const productSlider = [
 export default function Home() {
   return (
     <div>
-      <Header/>
+      {/* <Header/> */}
       <Hero/>
       <BrandsSlider/>
       <FeaturedProducts products={products}/>
       <TopCategory categories={categories}/>
       <ChairGallery/>
       <Products products={productSlider}/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

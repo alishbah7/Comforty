@@ -2,8 +2,6 @@
 import { useEffect } from 'react';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
-import Footer from '@/components/footer';
-import Header from '@/components/header';
 import Image from 'next/image';
 
 const CartSummary = () => {
@@ -12,7 +10,6 @@ const CartSummary = () => {
 }, []);
   return (
     <div>
-      <Header/>
       <div className='flex justify-center items-center px-[20px] sm:px-[0] py-[30px] lg:py[0] h-auto lg:h-[80vh] w-[100%]'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 
@@ -96,7 +93,6 @@ const CartSummary = () => {
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 };

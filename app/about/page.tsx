@@ -2,7 +2,6 @@
 import { useEffect } from 'react';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
-import  Header  from '@/components/header';
 import fp1 from '../../public/images/fp1.png';
 import Image from 'next/image';
 import Footer from '@/components/footer';
@@ -13,7 +12,6 @@ const About = () => {
     }, []);
     return (  
         <div>
-            <Header/>
             <div className='w-full flex flex-col md:flex-row  gap-[25px] items-center justify-center text-white py-[40px]'>  
             <div data-aos='zoom-in' className='flex flex-col justify-center items-center gap-[30px] sm:justify-start sm:items-start sm:gap-[0] bg-[#029FAE] w-[250px] sm:w-[450px] h-[300px] sm:h-[400px]'>  
                 <h2 className='text-[20px] sm:text-[25px] font-bold sm:pl-[40px] sm:mt-[60px]'>About Us - Comforty</h2>  
@@ -110,8 +108,6 @@ const About = () => {
                 </div>
             </div>
         </div>
-
-        <Footer/>
     </div>
     );  
 };  

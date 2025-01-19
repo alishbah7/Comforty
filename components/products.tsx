@@ -19,7 +19,6 @@ interface Product  {
 interface ProductsProps {  
   products: Product[];  
 }   
-
 const Products: React.FC<ProductsProps> = ({ products }) => {
     useEffect(() => {
         AOS.init({ duration: 2000, easing: 'ease', delay: 200 });

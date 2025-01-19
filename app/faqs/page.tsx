@@ -3,8 +3,6 @@ import { useEffect } from 'react';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
 
 const FAQs = () => {  
     useEffect(() => {
@@ -12,7 +10,6 @@ const FAQs = () => {
     }, []);
     return (  
         <div>
-            <Header/>
             <div className='hidden sm:block container mx-auto px-5 my-10'>  
                 <h2 className='text-3xl font-bold text-center mb-4' data-aos='fade-right'>Questions Looks Here</h2>  
                 <p className='text-center text-gray-600 mb-10' data-aos='fade-up'>  
@@ -122,7 +119,6 @@ const FAQs = () => {
                 </AccordionItem>
             </Accordion> 
 
-            <Footer/>
         </div> 
     );  
 };  
