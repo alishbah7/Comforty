@@ -4,7 +4,13 @@ const nextConfig = {
         remotePatterns: [
             { protocol: 'https', hostname: 'cdn.sanity.io' }
         ]
-    }
+    },
+    env: {
+        SANITY_API_VERSION: process.env.SANITY_API_VERSION,
+        SANITY_DATASET: process.env.SANITY_DATASET,
+        SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
+        SANITY_AUTH_TOKEN: process.env.SANITY_AUTH_TOKEN,
+    },
 };
 
 export default nextConfig;
