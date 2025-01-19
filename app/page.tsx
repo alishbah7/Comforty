@@ -2,8 +2,6 @@ import BrandsSlider from '@/components/brands';
 import TopCategory from '@/components/category';
 import ChairGallery from '@/components/explore';
 import FeaturedProducts from '@/components/featured';
-import Footer from '@/components/footer';
-import Header from '@/components/header';
 import Hero from '@/components/hero';
 import Products from '@/components/products';
 

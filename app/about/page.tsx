@@ -4,7 +4,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import fp1 from '../../public/images/fp1.png';
 import Image from 'next/image';
-import Footer from '@/components/footer';
 
 const About = () => {  
     useEffect(() => {
