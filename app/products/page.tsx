@@ -41,7 +41,7 @@ export default function ProductsPage() {
 
   return (
     <div>
- 
+      
       {/*--=== PRODUCTS COMPONENT ===--*/}
       <Products products={products} />
       <div className='headerSec py-12 flex flex-col gap-[20px]'>

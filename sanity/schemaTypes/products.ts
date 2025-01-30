@@ -30,7 +30,7 @@ export const productSchema = defineType({
       title: "Product Image",
       type: "image",
       options: {
-        hotspot: true, // Optional: Enables cropping and focal points
+        hotspot: true,
       },
     },
     {
