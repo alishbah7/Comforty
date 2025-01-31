@@ -1,5 +1,5 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import Image from 'next/image';
@@ -12,6 +12,12 @@ const Header = () => {
     useEffect(() => {
         AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
 }, []);
+
+//--=== CLOSING SHEET ON CLICKING LINKS ===--//
+const [isSheetOpen, setIsSheetOpen] = useState(false);
+const closeSheet = () => {
+  setIsSheetOpen(false);
+};
     return (  
         <div className='overflow-hidden'>
             <div className='text-center sm:flex sm:justify-between sm:items-center text-white py-2 w-full sm:px-[20px] lg:px-[250px] headerTop'>
@@ -43,19 +49,19 @@ const Header = () => {
                     </div>
                     </Link>
                     <div className='block md:hidden'>
-                        <Sheet>
+                        <Sheet  open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                             <SheetTrigger>
                                 <Menu className='block md:hidden w-[30px] h-[25px] mt-[5px]'/>
                             </SheetTrigger>
                             <SheetContent>
                             <div className='block md:hidden'>
                                 <nav className='flex flex-col gap-[15px] text-gray-600'>
-                                    <Link href={'/'} className='navHome'>Home</Link>
-                                    <Link href={'/products'}>Shop</Link>
-                                    <Link href={'/products'}>Products</Link>
-                                    <Link href={'/contact'}>Contact</Link>
-                                    <Link href={'/about'}>About</Link>
-                                    <Link href={'/faqs'}>Faqs</Link>
+                                    <Link href={'/'} className='navHome' onClick={closeSheet}>Home</Link>
+                                    <Link href={'/products'} onClick={closeSheet}>Shop</Link>
+                                    <Link href={'/products'} onClick={closeSheet}>Products</Link>
+                                    <Link href={'/contact'} onClick={closeSheet}>Contact</Link>
+                                    <Link href={'/about'} onClick={closeSheet}>About</Link>
+                                    <Link href={'/faqs'} onClick={closeSheet}>Faqs</Link>
                                 </nav>
                             </div>
                             </SheetContent>
