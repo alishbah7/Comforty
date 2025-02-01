@@ -114,7 +114,7 @@ const Products: React.FC<ProductsProps> = ({ products }) => {
           </div>
   
           {/*--==== PRODUCS ====--*/}
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-8'>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-8'>
             {filteredProducts.map((product) => (
               <div key={product._id} className='overflow-hidden' data-aos='zoom-in'>
                 <div className='relative'>
@@ -130,7 +130,7 @@ const Products: React.FC<ProductsProps> = ({ products }) => {
   
                 <div className='flex justify-between p-[10px]'>
                   <div>
-                    <h3 className='font-light text-lg tracking-wide text-gray-700'>{product.title}</h3>
+                    <h3 className='font-light text-[14px] sm:text-lg sm:tracking-wide text-gray-700'>{product.title}</h3>
                     <div className='flex gap-[10px]'>
                       {product.priceWithoutDiscount && <span className='text-black'> ${product.price}</span>}
                       <p className={`text-black ${product.priceWithoutDiscount ? 'line-through' : ''}`}>
