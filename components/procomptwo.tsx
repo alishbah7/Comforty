@@ -1,6 +1,4 @@
 'use client';
-// import { useEffect } from 'react';
-// import AOS from 'aos'; 
 import 'aos/dist/aos.css';  
 import Image from 'next/image';
 import Link from 'next/link'   
@@ -23,7 +21,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-
+//--=== FOR CATEGORIES ===--// 
 const frameworks = [
     {
         value: "All Products",
@@ -83,7 +81,7 @@ const Products: React.FC<ProductsProps> = ({ products }) => {
           <div className='flex justify-between'>
             <h2 className='text-2xl font-bold text-gray-800 tracking-tighter' data-aos='fade-right'>Products</h2>
             <Popover open={open} onOpenChange={setOpen}>
-              <PopoverTrigger asChild>
+              <PopoverTrigger asChild data-aos='fade-right'>
                 <Button variant="outline" role="combobox" className="w-[160px] justify-between">
                   {selectedCategory}
                   <ChevronsUpDown className="opacity-50" />
