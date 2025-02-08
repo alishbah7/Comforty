@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import 'aos/dist/aos.css';
 import { urlFor } from '@/sanity/lib/image';
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 type Product = {
   _id: string;
@@ -12,7 +13,7 @@ type Product = {
   price: number;
   priceWithoutDiscount?: number;
   badge?: string;
-  image: any;
+  image: SanityImageSource;
 };
 
 const SearchedProduct = () => {
