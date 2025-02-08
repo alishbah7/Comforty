@@ -3,14 +3,15 @@ import { useEffect } from 'react';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Product  {  
+    id: string
     title: string;  
     price: number;  
     salePrice: number | null;  
     badge: string; 
-    image: string;  
-    customClass: string;  
+    image: string;   
 }; 
 
 interface FeaturedProductsProps {  
@@ -26,6 +27,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ products }) => {
       <h2 className='flex justify-center items-center text-center sm:text-start sm:block text-2xl font-bold text-gray-800' data-aos='fade-right'>Featured Products</h2>  
       <div className='flex flex-col justify-center items-center sm:grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-5'>  
         {products.map((product, index) => (  
+          <Link href={`/details/${product.id}`}>
           <div key={index} className='overflow-hidden' data-aos='zoom-in'>  
             <div className='relative'>  
               {product.badge && (  
@@ -46,10 +48,11 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ products }) => {
                     </div>
               </div>
               <div>
-                <button className={`cartBg px-[10px] py-[5px] rounded-md text-[20px]  ${product.customClass}`}><i className='bx bx-cart-alt'></i></button>  
+                <button className="cartBg px-[10px] py-[5px] rounded-md text-[20px] hover:bg-[#029FAE] hover:text-white"><i className='bx bx-cart-alt'></i></button>  
               </div>
             </div>  
           </div>  
+          </Link>
         ))}  
       </div>  
     </div>  
