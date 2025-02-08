@@ -6,17 +6,6 @@ import {client} from '../../sanity/lib/client';
 import Products from '@/components/procomptwo';
 import Image from 'next/image';
 
-interface Product {
-  _id: string;
-  title: string;
-  price: number;
-  priceWithoutDiscount: number | null;
-  badge: string | null;
-  image: string;
-  description: string;
-  inventory: number;
-  quantity?: number; // Added quantity field
-}
 export default function ProductsPage() {
 
   const [products, setProducts] = useState([]);

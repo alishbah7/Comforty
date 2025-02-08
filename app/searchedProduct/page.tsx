@@ -18,13 +18,11 @@ type Product = {
 const SearchedProduct = () => {
 
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
-  const [searchCategory, setSearchCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   //--==== SEARCH FUNCTIONALITY ====--//
   useEffect(() => {
     const storedCategory = localStorage.getItem('searchedCategory');
-    setSearchCategory(storedCategory);
 
     if (storedCategory) {
       client
@@ -48,35 +46,35 @@ const SearchedProduct = () => {
   }, []);
 
   //--==== ADD TO CART FUNCTIONALITY ====--//
-    const addToCart = (product: Product) => {
-      const cart = JSON.parse(localStorage.getItem("cart") || "[]");
-      const existingProductIndex = cart.findIndex((item: Product) => item._id === product._id);
-  
-      const productWithImage = {
-        ...product,
-        image: urlFor(product.image).url(),
-      };
-  
-      if (existingProductIndex > -1) {
-        cart[existingProductIndex].quantity += 1;
-      } else {
-        cart.push({ ...productWithImage, quantity: 1 });
-      }
-  
-      localStorage.setItem("cart", JSON.stringify(cart));
-      window.dispatchEvent(new CustomEvent("cartUpdated"));
-  
-      const popup = document.getElementById("popUp");
-      if (popup) {
-        popup.classList.remove("hidden");
-        popup.classList.add("block");
-  
-        setTimeout(() => {
-          popup.classList.remove("block");
-          popup.classList.add("hidden");
-        }, 1500);
-      }
+  const addToCart = (product: Product) => {
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    const existingProductIndex = cart.findIndex((item: Product) => item._id === product._id);
+
+    const productWithImage = {
+      ...product,
+      image: urlFor(product.image).url(),
     };
+
+    if (existingProductIndex > -1) {
+      cart[existingProductIndex].quantity += 1;
+    } else {
+      cart.push({ ...productWithImage, quantity: 1 });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    window.dispatchEvent(new CustomEvent("cartUpdated"));
+
+    const popup = document.getElementById("popUp");
+    if (popup) {
+      popup.classList.remove("hidden");
+      popup.classList.add("block");
+
+      setTimeout(() => {
+        popup.classList.remove("block");
+        popup.classList.add("hidden");
+      }, 1500);
+    }
+  };
 
   return (
     <div className="mt-8">

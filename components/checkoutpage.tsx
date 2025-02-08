@@ -27,7 +27,7 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
   const [clientSecret, setClientSecret] = useState("");
   
   // useState hook to track whether a payment is processing.
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   // useEffect hook to create a PaymentIntent on the server as soon as the component mounts or 'amount' changes.
   useEffect(() => {
@@ -52,7 +52,7 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
     event.preventDefault();
     
     // Indicate that the payment process is loading.
-    setLoading(true);
+    // setLoading(true);
 
     // If Stripe or Elements haven't initialized yet, exit early.
     if (!stripe || !elements) {
@@ -65,7 +65,7 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
     // If there's an error during the Elements submission, display it and reset loading.
     if (submitError) {
       setErrorMessage(submitError.message);
-      setLoading(false);
+      // setLoading(false);
       return;
     }
 
@@ -89,7 +89,7 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
     }
 
     // Reset the loading state after processing.
-    setLoading(false);
+    // setLoading(false);
   };
 
   // If the clientSecret, stripe, or elements aren't ready, show a loading spinner.
