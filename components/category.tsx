@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
+import Link from 'next/link'
 import Image from 'next/image'
 
 interface Category {  
@@ -36,17 +37,29 @@ interface CategorySectionProps {
 }  
 
 const TopCategory: React.FC<CategorySectionProps> = ({ categories }) => {  
+
+  //--==== CATEGORY SAVED IN LOCALSTORAGE WHEN CLICKED ====--//
+  const handleCategoryClick = (title: string) => {
+    localStorage.setItem('searchedCategory', title);
+  };
+  
   return (  
     <div className='flex flex-col justify-center items-center p-8' >  
       <h2 className='flex justify-center gap-[20px] items-center md:justify-start md:items-start text-xl font-bold mb-4 w-[100%] xl:w-[90%] text-start' data-aos='fade-right'>Top Categories</h2>  
       <div className='flex flex-col justify-center items-center xl:grid xl:grid-cols-3 gap-[20px] xl:gap-4 w-[100%] lg:w-[90%]'>  
         {categories.map((category) => (  
+           <Link 
+           key={category.id}
+           href={'/searchedProduct'}
+           onClick={() => handleCategoryClick(category.title)}
+         >
           <CategoryCard  
             key={category.id}  
             image={category.image}  
             title={category.title}  
             productCount={category.productCount} 
           />  
+          </Link>
         ))}  
       </div>
       </div>  

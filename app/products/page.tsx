@@ -6,9 +6,21 @@ import {client} from '../../sanity/lib/client';
 import Products from '@/components/procomptwo';
 import Image from 'next/image';
 
+interface Product {
+  _id: string;
+  title: string;
+  price: number;
+  priceWithoutDiscount: number | null;
+  badge: string | null;
+  image: string;
+  description: string;
+  inventory: number;
+  quantity?: number; // Added quantity field
+}
 export default function ProductsPage() {
 
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     AOS.init({ duration: 2000, easing: 'ease', delay: 200 });
@@ -34,16 +46,24 @@ export default function ProductsPage() {
       `;
       const result = await client.fetch(query);
       setProducts(result);
+      setLoading(false);
     };
 
     fetchProducts();
   }, []);
 
+
+
   return (
     <div>
       
       {/*--=== PRODUCTS COMPONENT ===--*/}
-      <Products products={products} />
+      {loading ? (
+        <div className="text-center py-10 text-[25px] font-semibold">Loading...</div>
+      ) : (
+        <Products products={products} />
+      )}
+      {/* <Products products={products} /> */}
       <div className='headerSec py-12 flex flex-col gap-[20px]'>
         <div className='text-center mb-10'>
 

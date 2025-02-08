@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import 'aos/dist/aos.css';
 import Image from 'next/image';
 import logo from '../public/images/logo.png';
@@ -10,11 +10,33 @@ import { Search } from "lucide-react";
 
 const Header = () => {  
 
-//--=== CLOSING SHEET ON CLICKING LINKS ===--//
-const [isSheetOpen, setIsSheetOpen] = useState(false);
-const closeSheet = () => {
-  setIsSheetOpen(false);
-};
+    //--==== CART QUANTITY FUNCTIONALITY ====--//
+    const [cartQuantity, setCartQuantity] = useState(0);
+    const calculateCartQuantity = () => {
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const totalQuantity = cart.reduce(
+          (sum: number, item: { quantity: number }) => sum + (item.quantity || 0),
+          0
+        );
+        setCartQuantity(totalQuantity);
+    };
+    useEffect(() => {
+        calculateCartQuantity();
+    
+        const handleCartUpdate = () => calculateCartQuantity();
+        window.addEventListener('cartUpdated', handleCartUpdate);
+    
+        return () => {
+          window.removeEventListener('cartUpdated', handleCartUpdate);
+        };
+      }, []);
+    
+    //--=== CLOSING SHEET ON CLICKING LINKS ===--//
+    const [isSheetOpen, setIsSheetOpen] = useState(false);
+    const closeSheet = () => {
+    setIsSheetOpen(false);
+    };
+
     return (  
         <div className='overflow-hidden'>
 
@@ -52,7 +74,7 @@ const closeSheet = () => {
                     <div className='flex gap-[8px] justify-center items-center rounded-md bg-white h-[35px] w-[100px] py-[5px]'>
                         <i className='bx bx-cart text-[20px]'></i>
                         <h1 className='text-[14px] tracking-wide'>Cart</h1>
-                        <p className='bg-green-900 hdP'>2</p>
+                        <p className='bg-green-900 hdP'>{cartQuantity}</p>
                     </div>
                     </Link>
 
@@ -76,12 +98,30 @@ const closeSheet = () => {
                                     <Link href={'/about'} onClick={closeSheet}>About</Link>
                                     <Link href={'/faqs'} onClick={closeSheet}>Faqs</Link>
                                     <div className="flex items-center bg-gray-100 rounded-full px-4 py-3">
-                                    <input
-                                        type="text"
-                                        placeholder="Search Anything"
-                                        className="bg-transparent focus:outline-none text-sm text-black w-full"
-                                    />
-                                    <Search className="text-black w-5 h-5 cursor-pointer" />
+                                        <input
+                                            type="text"
+                                            placeholder="Search Anything"
+                                            className="bg-transparent focus:outline-none text-sm text-black w-full"
+                                            id="categorySearchInput2"
+                                        />
+                                        <Link
+                                        onClick={() => {
+                                            const searchInputElement = document.getElementById('categorySearchInput2') as HTMLInputElement | null;
+                                          
+                                            if (searchInputElement) {
+                                              let searchValue = searchInputElement.value.trim();
+                                              
+                                              //--==== TITLE CASE ====--//
+                                              searchValue = searchValue
+                                                .toLowerCase()
+                                                .replace(/\b\w/g, char => char.toUpperCase());
+                                              
+                                              localStorage.setItem('searchedCategory', searchValue);
+                                            } else {
+                                              console.error("Search input element not found.");
+                                            }
+                                          }}
+                                        href={'/searchedProduct'}><Search onClick={closeSheet} className="text-black w-5 h-5 cursor-pointer" /></Link>
                                     </div>
                                 </nav>
                             </div>
@@ -108,8 +148,26 @@ const closeSheet = () => {
                         type="text"
                         placeholder="Search Anything"
                         className="bg-transparent focus:outline-none text-sm text-black w-full"
+                        id="categorySearchInput"
                     />
-                    <Search className="text-black w-5 h-5 cursor-pointer" />
+                    <Link
+                    onClick={() => {
+                        const searchInputElement = document.getElementById('categorySearchInput') as HTMLInputElement | null;
+                      
+                        if (searchInputElement) {
+                          let searchValue = searchInputElement.value.trim();
+                          
+                          //--==== TITLE CASE ====--//
+                          searchValue = searchValue
+                            .toLowerCase()
+                            .replace(/\b\w/g, char => char.toUpperCase());
+                          
+                          localStorage.setItem('searchedCategory', searchValue);
+                        } else {
+                          console.error("Search input element not found.");
+                        }
+                      }}
+                    href={'/searchedProduct'}><Search className="text-black w-5 h-5 cursor-pointer" /></Link>
                 </div>
             </div>
         </div> 

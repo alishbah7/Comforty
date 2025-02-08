@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import * as React from "react"
 
+
 import {
   Command,
   CommandGroup,
@@ -72,7 +73,38 @@ const Products: React.FC<ProductsProps> = ({ products }) => {
     const filteredProducts = selectedCategory === "All Products" 
       ? products 
       : products.filter((product) => product.category.title === selectedCategory);
+
+    //--==== ADD TO CART FUNCTIONALITY ====--//
+    const addToCart = (product: Product) => {
+      const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+      const existingProductIndex = cart.findIndex((item: Product) => item._id === product._id);
   
+      const productWithImage = {
+        ...product,
+        image: urlFor(product.image).url(),
+      };
+  
+      if (existingProductIndex > -1) {
+        cart[existingProductIndex].quantity += 1;
+      } else {
+        cart.push({ ...productWithImage, quantity: 1 });
+      }
+  
+      localStorage.setItem("cart", JSON.stringify(cart));
+      window.dispatchEvent(new CustomEvent("cartUpdated"));
+  
+      const popup = document.getElementById("popUp");
+      if (popup) {
+        popup.classList.remove("hidden");
+        popup.classList.add("block");
+  
+        setTimeout(() => {
+          popup.classList.remove("block");
+          popup.classList.add("hidden");
+        }, 1500);
+      }
+    };
+
     return (
       <div>
         <div className='container mx-auto my-10 px-[10px] xl:px-[180px]'>
@@ -137,13 +169,18 @@ const Products: React.FC<ProductsProps> = ({ products }) => {
                     </div>
                   </div>
                   <div>
-                    <Link href=''><button className="cartBg px-[10px] py-[5px] rounded-md bg-gray-200 hover:bg-[#029FAE] hover:text-white"><i className='bx bx-cart-alt'></i></button></Link>
+                    <button onClick={() => addToCart(product)} className="cartBg px-[10px] py-[5px] rounded-md bg-gray-200 hover:bg-[#029FAE] hover:text-white"><i className='bx bx-cart-alt'></i></button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
+        </div>
+
+        {/*--==== POPUP FOR ADD TO CART ====--*/}
+        <div className='flex justify-center items-center'>
+          <div id="popUp" className="hidden fixed top-5  bg-black text-white px-4 py-2 rounded-md shadow-lg z-50">✅ Item Added to Cart!</div>
         </div>
       </div>
     );
