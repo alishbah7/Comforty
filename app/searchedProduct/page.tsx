@@ -36,7 +36,7 @@ const SearchedProduct = () => {
           }[0]`,
           { storedCategory }
         )
-        .then((data) => {
+        .then((data: { products: Product[] } | null) => {
           setFilteredProducts(data?.products || []);
         })
         .catch((err) => console.error(err))
